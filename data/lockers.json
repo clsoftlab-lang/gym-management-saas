@@ -1,0 +1,433 @@
+[
+  {
+    "id": "L001",
+    "number": "A-01",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L002",
+    "number": "A-02",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L003",
+    "number": "A-03",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L004",
+    "number": "A-04",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L005",
+    "number": "A-05",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L006",
+    "number": "A-06",
+    "zone": "남자 탈의실",
+    "status": "occupied",
+    "memberId": "M024",
+    "expireDate": "2026-10-19"
+  },
+  {
+    "id": "L007",
+    "number": "A-07",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L008",
+    "number": "A-08",
+    "zone": "남자 탈의실",
+    "status": "occupied",
+    "memberId": "M021",
+    "expireDate": "2026-12-07"
+  },
+  {
+    "id": "L009",
+    "number": "A-09",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L010",
+    "number": "A-10",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L011",
+    "number": "A-11",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L012",
+    "number": "A-12",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L013",
+    "number": "A-13",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L014",
+    "number": "A-14",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L015",
+    "number": "A-15",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L016",
+    "number": "A-16",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L017",
+    "number": "A-17",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L018",
+    "number": "A-18",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L019",
+    "number": "A-19",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L020",
+    "number": "A-20",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L021",
+    "number": "A-21",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L022",
+    "number": "A-22",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L023",
+    "number": "A-23",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L024",
+    "number": "A-24",
+    "zone": "남자 탈의실",
+    "status": "occupied",
+    "memberId": "M004",
+    "expireDate": "2026-12-11"
+  },
+  {
+    "id": "L025",
+    "number": "A-25",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L026",
+    "number": "A-26",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L027",
+    "number": "A-27",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L028",
+    "number": "A-28",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L029",
+    "number": "A-29",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L030",
+    "number": "A-30",
+    "zone": "남자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L031",
+    "number": "B-01",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L032",
+    "number": "B-02",
+    "zone": "여자 탈의실",
+    "status": "occupied",
+    "memberId": "M026",
+    "expireDate": "2026-12-19"
+  },
+  {
+    "id": "L033",
+    "number": "B-03",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L034",
+    "number": "B-04",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L035",
+    "number": "B-05",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L036",
+    "number": "B-06",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L037",
+    "number": "B-07",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L038",
+    "number": "B-08",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L039",
+    "number": "B-09",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L040",
+    "number": "B-10",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L041",
+    "number": "B-11",
+    "zone": "여자 탈의실",
+    "status": "occupied",
+    "memberId": "M019",
+    "expireDate": "2026-09-24"
+  },
+  {
+    "id": "L042",
+    "number": "B-12",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L043",
+    "number": "B-13",
+    "zone": "여자 탈의실",
+    "status": "occupied",
+    "memberId": "M039",
+    "expireDate": "2026-10-23"
+  },
+  {
+    "id": "L044",
+    "number": "B-14",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L045",
+    "number": "B-15",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L046",
+    "number": "B-16",
+    "zone": "여자 탈의실",
+    "status": "occupied",
+    "memberId": "M027",
+    "expireDate": "2026-11-06"
+  },
+  {
+    "id": "L047",
+    "number": "B-17",
+    "zone": "여자 탈의실",
+    "status": "occupied",
+    "memberId": "M014",
+    "expireDate": "2026-12-02"
+  },
+  {
+    "id": "L048",
+    "number": "B-18",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L049",
+    "number": "B-19",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L050",
+    "number": "B-20",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L051",
+    "number": "B-21",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L052",
+    "number": "B-22",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L053",
+    "number": "B-23",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L054",
+    "number": "B-24",
+    "zone": "여자 탈의실",
+    "status": "occupied",
+    "memberId": "M040",
+    "expireDate": "2027-07-17"
+  },
+  {
+    "id": "L055",
+    "number": "B-25",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L056",
+    "number": "B-26",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L057",
+    "number": "B-27",
+    "zone": "여자 탈의실",
+    "status": "occupied",
+    "memberId": "M037",
+    "expireDate": "2027-02-03"
+  },
+  {
+    "id": "L058",
+    "number": "B-28",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  },
+  {
+    "id": "L059",
+    "number": "B-29",
+    "zone": "여자 탈의실",
+    "status": "occupied",
+    "memberId": "M036",
+    "expireDate": "2027-02-07"
+  },
+  {
+    "id": "L060",
+    "number": "B-30",
+    "zone": "여자 탈의실",
+    "status": "empty",
+    "memberId": null
+  }
+]

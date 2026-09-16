@@ -1,0 +1,46 @@
+[
+  {
+    "id": "PL01",
+    "name": "1개월권",
+    "months": 1,
+    "price": 88000
+  },
+  {
+    "id": "PL02",
+    "name": "3개월권",
+    "months": 3,
+    "price": 231000
+  },
+  {
+    "id": "PL03",
+    "name": "6개월권",
+    "months": 6,
+    "price": 396000
+  },
+  {
+    "id": "PL04",
+    "name": "12개월권",
+    "months": 12,
+    "price": 660000
+  },
+  {
+    "id": "PL05",
+    "name": "PT 10회",
+    "months": 3,
+    "price": 550000,
+    "pt": 10
+  },
+  {
+    "id": "PL06",
+    "name": "PT 20회",
+    "months": 6,
+    "price": 1000000,
+    "pt": 20
+  },
+  {
+    "id": "PL07",
+    "name": "주3회 헬스",
+    "months": 3,
+    "price": 180000
+  }
+]

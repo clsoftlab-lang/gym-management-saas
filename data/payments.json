@@ -1,0 +1,1064 @@
+[
+  {
+    "id": "P0050",
+    "memberId": "M039",
+    "date": "2025-10-23",
+    "amount": 660000,
+    "method": "계좌이체",
+    "plan": "12개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0026",
+    "memberId": "M020",
+    "date": "2025-10-30",
+    "amount": 180000,
+    "method": "계좌이체",
+    "plan": "주3회 헬스",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0015",
+    "memberId": "M011",
+    "date": "2025-11-03",
+    "amount": 396000,
+    "method": "카드",
+    "plan": "6개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0042",
+    "memberId": "M032",
+    "date": "2025-11-18",
+    "amount": 550000,
+    "method": "계좌이체",
+    "plan": "PT 10회",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0051",
+    "memberId": "M039",
+    "date": "2025-11-23",
+    "amount": 88000,
+    "method": "카드",
+    "plan": "1개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0011",
+    "memberId": "M008",
+    "date": "2025-11-28",
+    "amount": 1000000,
+    "method": "카드",
+    "plan": "PT 20회",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0004",
+    "memberId": "M004",
+    "date": "2025-12-11",
+    "amount": 660000,
+    "method": "카드",
+    "plan": "12개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0020",
+    "memberId": "M015",
+    "date": "2025-12-17",
+    "amount": 180000,
+    "method": "현금",
+    "plan": "주3회 헬스",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0039",
+    "memberId": "M030",
+    "date": "2025-12-17",
+    "amount": 1000000,
+    "method": "카드",
+    "plan": "PT 20회",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0032",
+    "memberId": "M026",
+    "date": "2025-12-19",
+    "amount": 660000,
+    "method": "카드",
+    "plan": "12개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0017",
+    "memberId": "M013",
+    "date": "2025-12-23",
+    "amount": 88000,
+    "method": "카드",
+    "plan": "1개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0029",
+    "memberId": "M023",
+    "date": "2026-01-01",
+    "amount": 88000,
+    "method": "카드",
+    "plan": "1개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0055",
+    "memberId": "M042",
+    "date": "2026-01-03",
+    "amount": 231000,
+    "method": "카드",
+    "plan": "3개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0005",
+    "memberId": "M004",
+    "date": "2026-01-11",
+    "amount": 231000,
+    "method": "현금",
+    "plan": "1개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0033",
+    "memberId": "M026",
+    "date": "2026-01-19",
+    "amount": 396000,
+    "method": "현금",
+    "plan": "1개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0008",
+    "memberId": "M006",
+    "date": "2026-01-22",
+    "amount": 231000,
+    "method": "카드",
+    "plan": "3개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0002",
+    "memberId": "M002",
+    "date": "2026-01-23",
+    "amount": 180000,
+    "method": "카드",
+    "plan": "주3회 헬스",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0018",
+    "memberId": "M013",
+    "date": "2026-01-23",
+    "amount": 231000,
+    "method": "카드",
+    "plan": "1개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0045",
+    "memberId": "M034",
+    "date": "2026-01-23",
+    "amount": 660000,
+    "method": "현금",
+    "plan": "12개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0056",
+    "memberId": "M042",
+    "date": "2026-02-03",
+    "amount": 88000,
+    "method": "현금",
+    "plan": "1개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0028",
+    "memberId": "M022",
+    "date": "2026-02-05",
+    "amount": 231000,
+    "method": "카드",
+    "plan": "3개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0047",
+    "memberId": "M036",
+    "date": "2026-02-07",
+    "amount": 660000,
+    "method": "카드",
+    "plan": "12개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0037",
+    "memberId": "M029",
+    "date": "2026-02-10",
+    "amount": 231000,
+    "method": "카드",
+    "plan": "3개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0001",
+    "memberId": "M001",
+    "date": "2026-02-17",
+    "amount": 660000,
+    "method": "카드",
+    "plan": "12개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0006",
+    "memberId": "M005",
+    "date": "2026-02-23",
+    "amount": 88000,
+    "method": "현금",
+    "plan": "1개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0038",
+    "memberId": "M029",
+    "date": "2026-03-10",
+    "amount": 88000,
+    "method": "현금",
+    "plan": "1개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0007",
+    "memberId": "M005",
+    "date": "2026-03-23",
+    "amount": 88000,
+    "method": "현금",
+    "plan": "3개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0009",
+    "memberId": "M007",
+    "date": "2026-03-23",
+    "amount": 1000000,
+    "method": "카드",
+    "plan": "PT 20회",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0025",
+    "memberId": "M019",
+    "date": "2026-03-24",
+    "amount": 396000,
+    "method": "카드",
+    "plan": "6개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0054",
+    "memberId": "M041",
+    "date": "2026-04-01",
+    "amount": 180000,
+    "method": "계좌이체",
+    "plan": "주3회 헬스",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0061",
+    "memberId": "M025",
+    "date": "2026-04-02",
+    "amount": 180000,
+    "method": "현금",
+    "plan": "주3회 헬스",
+    "type": "재등록"
+  },
+  {
+    "id": "P0021",
+    "memberId": "M016",
+    "date": "2026-04-04",
+    "amount": 550000,
+    "method": "현금",
+    "plan": "PT 10회",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0049",
+    "memberId": "M038",
+    "date": "2026-04-06",
+    "amount": 550000,
+    "method": "카드",
+    "plan": "PT 10회",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0060",
+    "memberId": "M028",
+    "date": "2026-04-08",
+    "amount": 1000000,
+    "method": "계좌이체",
+    "plan": "PT 20회",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0063",
+    "memberId": "M007",
+    "date": "2026-04-13",
+    "amount": 88000,
+    "method": "카드",
+    "plan": "1개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0058",
+    "memberId": "M031",
+    "date": "2026-04-14",
+    "amount": 660000,
+    "method": "카드",
+    "plan": "12개월권",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0022",
+    "memberId": "M017",
+    "date": "2026-04-19",
+    "amount": 88000,
+    "method": "계좌이체",
+    "plan": "1개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0030",
+    "memberId": "M024",
+    "date": "2026-04-19",
+    "amount": 1000000,
+    "method": "카드",
+    "plan": "PT 20회",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0016",
+    "memberId": "M012",
+    "date": "2026-04-20",
+    "amount": 231000,
+    "method": "카드",
+    "plan": "3개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0062",
+    "memberId": "M014",
+    "date": "2026-04-20",
+    "amount": 1000000,
+    "method": "계좌이체",
+    "plan": "PT 20회",
+    "type": "재등록"
+  },
+  {
+    "id": "P0003",
+    "memberId": "M003",
+    "date": "2026-04-21",
+    "amount": 88000,
+    "method": "현금",
+    "plan": "1개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0010",
+    "memberId": "M007",
+    "date": "2026-04-23",
+    "amount": 88000,
+    "method": "카드",
+    "plan": "1개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0057",
+    "memberId": "M017",
+    "date": "2026-04-23",
+    "amount": 550000,
+    "method": "카드",
+    "plan": "PT 10회",
+    "type": "재등록"
+  },
+  {
+    "id": "P0059",
+    "memberId": "M011",
+    "date": "2026-04-25",
+    "amount": 231000,
+    "method": "계좌이체",
+    "plan": "3개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0031",
+    "memberId": "M025",
+    "date": "2026-05-02",
+    "amount": 550000,
+    "method": "계좌이체",
+    "plan": "PT 10회",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0064",
+    "memberId": "M031",
+    "date": "2026-05-02",
+    "amount": 660000,
+    "method": "카드",
+    "plan": "12개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0065",
+    "memberId": "M016",
+    "date": "2026-05-02",
+    "amount": 231000,
+    "method": "카드",
+    "plan": "3개월권",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0068",
+    "memberId": "M024",
+    "date": "2026-05-02",
+    "amount": 231000,
+    "method": "카드",
+    "plan": "3개월권",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0074",
+    "memberId": "M018",
+    "date": "2026-05-08",
+    "amount": 88000,
+    "method": "카드",
+    "plan": "1개월권",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0040",
+    "memberId": "M031",
+    "date": "2026-05-09",
+    "amount": 231000,
+    "method": "카드",
+    "plan": "3개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0069",
+    "memberId": "M039",
+    "date": "2026-05-12",
+    "amount": 1000000,
+    "method": "계좌이체",
+    "plan": "PT 20회",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0070",
+    "memberId": "M002",
+    "date": "2026-05-16",
+    "amount": 231000,
+    "method": "카드",
+    "plan": "3개월권",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0071",
+    "memberId": "M014",
+    "date": "2026-05-16",
+    "amount": 1000000,
+    "method": "계좌이체",
+    "plan": "PT 20회",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0075",
+    "memberId": "M018",
+    "date": "2026-05-17",
+    "amount": 396000,
+    "method": "카드",
+    "plan": "6개월권",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0073",
+    "memberId": "M014",
+    "date": "2026-05-20",
+    "amount": 180000,
+    "method": "계좌이체",
+    "plan": "주3회 헬스",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0066",
+    "memberId": "M007",
+    "date": "2026-05-23",
+    "amount": 88000,
+    "method": "현금",
+    "plan": "1개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0023",
+    "memberId": "M018",
+    "date": "2026-05-24",
+    "amount": 180000,
+    "method": "카드",
+    "plan": "주3회 헬스",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0072",
+    "memberId": "M025",
+    "date": "2026-05-24",
+    "amount": 1000000,
+    "method": "현금",
+    "plan": "PT 20회",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0013",
+    "memberId": "M010",
+    "date": "2026-05-25",
+    "amount": 180000,
+    "method": "카드",
+    "plan": "주3회 헬스",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0067",
+    "memberId": "M024",
+    "date": "2026-05-25",
+    "amount": 180000,
+    "method": "계좌이체",
+    "plan": "주3회 헬스",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0035",
+    "memberId": "M028",
+    "date": "2026-05-30",
+    "amount": 180000,
+    "method": "카드",
+    "plan": "주3회 헬스",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0012",
+    "memberId": "M009",
+    "date": "2026-05-31",
+    "amount": 88000,
+    "method": "카드",
+    "plan": "1개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0080",
+    "memberId": "M035",
+    "date": "2026-06-01",
+    "amount": 396000,
+    "method": "카드",
+    "plan": "6개월권",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0084",
+    "memberId": "M042",
+    "date": "2026-06-02",
+    "amount": 550000,
+    "method": "카드",
+    "plan": "PT 10회",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0088",
+    "memberId": "M008",
+    "date": "2026-06-03",
+    "amount": 180000,
+    "method": "카드",
+    "plan": "주3회 헬스",
+    "type": "재등록"
+  },
+  {
+    "id": "P0081",
+    "memberId": "M021",
+    "date": "2026-06-06",
+    "amount": 88000,
+    "method": "카드",
+    "plan": "1개월권",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0041",
+    "memberId": "M031",
+    "date": "2026-06-09",
+    "amount": 396000,
+    "method": "현금",
+    "plan": "1개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0077",
+    "memberId": "M016",
+    "date": "2026-06-12",
+    "amount": 660000,
+    "method": "카드",
+    "plan": "12개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0082",
+    "memberId": "M030",
+    "date": "2026-06-12",
+    "amount": 660000,
+    "method": "카드",
+    "plan": "12개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0085",
+    "memberId": "M028",
+    "date": "2026-06-13",
+    "amount": 1000000,
+    "method": "카드",
+    "plan": "PT 20회",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0078",
+    "memberId": "M002",
+    "date": "2026-06-14",
+    "amount": 550000,
+    "method": "카드",
+    "plan": "PT 10회",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0087",
+    "memberId": "M029",
+    "date": "2026-06-15",
+    "amount": 396000,
+    "method": "계좌이체",
+    "plan": "6개월권",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0083",
+    "memberId": "M041",
+    "date": "2026-06-18",
+    "amount": 660000,
+    "method": "카드",
+    "plan": "12개월권",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0089",
+    "memberId": "M031",
+    "date": "2026-06-18",
+    "amount": 660000,
+    "method": "계좌이체",
+    "plan": "12개월권",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0079",
+    "memberId": "M010",
+    "date": "2026-06-19",
+    "amount": 180000,
+    "method": "계좌이체",
+    "plan": "주3회 헬스",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0086",
+    "memberId": "M028",
+    "date": "2026-06-19",
+    "amount": 660000,
+    "method": "카드",
+    "plan": "12개월권",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0024",
+    "memberId": "M018",
+    "date": "2026-06-24",
+    "amount": 88000,
+    "method": "현금",
+    "plan": "3개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0014",
+    "memberId": "M010",
+    "date": "2026-06-25",
+    "amount": 88000,
+    "method": "카드",
+    "plan": "1개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0076",
+    "memberId": "M005",
+    "date": "2026-06-25",
+    "amount": 1000000,
+    "method": "현금",
+    "plan": "PT 20회",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0036",
+    "memberId": "M028",
+    "date": "2026-06-30",
+    "amount": 231000,
+    "method": "현금",
+    "plan": "1개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0102",
+    "memberId": "M034",
+    "date": "2026-07-02",
+    "amount": 180000,
+    "method": "계좌이체",
+    "plan": "주3회 헬스",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0091",
+    "memberId": "M020",
+    "date": "2026-07-03",
+    "amount": 1000000,
+    "method": "카드",
+    "plan": "PT 20회",
+    "type": "재등록"
+  },
+  {
+    "id": "P0097",
+    "memberId": "M011",
+    "date": "2026-07-03",
+    "amount": 550000,
+    "method": "현금",
+    "plan": "PT 10회",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0098",
+    "memberId": "M002",
+    "date": "2026-07-05",
+    "amount": 88000,
+    "method": "계좌이체",
+    "plan": "1개월권",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0100",
+    "memberId": "M023",
+    "date": "2026-07-07",
+    "amount": 180000,
+    "method": "카드",
+    "plan": "주3회 헬스",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0103",
+    "memberId": "M014",
+    "date": "2026-07-07",
+    "amount": 660000,
+    "method": "현금",
+    "plan": "12개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0094",
+    "memberId": "M033",
+    "date": "2026-07-10",
+    "amount": 1000000,
+    "method": "카드",
+    "plan": "PT 20회",
+    "type": "재등록"
+  },
+  {
+    "id": "P0095",
+    "memberId": "M034",
+    "date": "2026-07-11",
+    "amount": 231000,
+    "method": "카드",
+    "plan": "3개월권",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0052",
+    "memberId": "M040",
+    "date": "2026-07-17",
+    "amount": 660000,
+    "method": "카드",
+    "plan": "12개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0099",
+    "memberId": "M042",
+    "date": "2026-07-18",
+    "amount": 88000,
+    "method": "계좌이체",
+    "plan": "1개월권",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0090",
+    "memberId": "M006",
+    "date": "2026-07-19",
+    "amount": 550000,
+    "method": "카드",
+    "plan": "PT 10회",
+    "type": "재등록"
+  },
+  {
+    "id": "P0101",
+    "memberId": "M027",
+    "date": "2026-07-20",
+    "amount": 231000,
+    "method": "현금",
+    "plan": "3개월권",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0043",
+    "memberId": "M033",
+    "date": "2026-07-23",
+    "amount": 1000000,
+    "method": "카드",
+    "plan": "PT 20회",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0093",
+    "memberId": "M039",
+    "date": "2026-07-23",
+    "amount": 396000,
+    "method": "계좌이체",
+    "plan": "6개월권",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0096",
+    "memberId": "M013",
+    "date": "2026-07-23",
+    "amount": 1000000,
+    "method": "현금",
+    "plan": "PT 20회",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0092",
+    "memberId": "M034",
+    "date": "2026-07-27",
+    "amount": 550000,
+    "method": "카드",
+    "plan": "PT 10회",
+    "type": "재등록"
+  },
+  {
+    "id": "P0048",
+    "memberId": "M037",
+    "date": "2026-08-03",
+    "amount": 1000000,
+    "method": "카드",
+    "plan": "PT 20회",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0108",
+    "memberId": "M027",
+    "date": "2026-08-05",
+    "amount": 396000,
+    "method": "현금",
+    "plan": "6개월권",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0034",
+    "memberId": "M027",
+    "date": "2026-08-06",
+    "amount": 231000,
+    "method": "계좌이체",
+    "plan": "3개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0104",
+    "memberId": "M040",
+    "date": "2026-08-09",
+    "amount": 1000000,
+    "method": "카드",
+    "plan": "PT 20회",
+    "type": "재등록"
+  },
+  {
+    "id": "P0107",
+    "memberId": "M041",
+    "date": "2026-08-10",
+    "amount": 550000,
+    "method": "현금",
+    "plan": "PT 10회",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0112",
+    "memberId": "M034",
+    "date": "2026-08-14",
+    "amount": 231000,
+    "method": "현금",
+    "plan": "3개월권",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0046",
+    "memberId": "M035",
+    "date": "2026-08-16",
+    "amount": 550000,
+    "method": "카드",
+    "plan": "PT 10회",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0053",
+    "memberId": "M040",
+    "date": "2026-08-17",
+    "amount": 231000,
+    "method": "카드",
+    "plan": "1개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0114",
+    "memberId": "M037",
+    "date": "2026-08-17",
+    "amount": 1000000,
+    "method": "현금",
+    "plan": "PT 20회",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0111",
+    "memberId": "M027",
+    "date": "2026-08-20",
+    "amount": 396000,
+    "method": "카드",
+    "plan": "6개월권",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0113",
+    "memberId": "M035",
+    "date": "2026-08-21",
+    "amount": 550000,
+    "method": "계좌이체",
+    "plan": "PT 10회",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0044",
+    "memberId": "M033",
+    "date": "2026-08-23",
+    "amount": 88000,
+    "method": "카드",
+    "plan": "1개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0110",
+    "memberId": "M040",
+    "date": "2026-08-23",
+    "amount": 660000,
+    "method": "계좌이체",
+    "plan": "12개월권",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0106",
+    "memberId": "M042",
+    "date": "2026-08-24",
+    "amount": 180000,
+    "method": "카드",
+    "plan": "주3회 헬스",
+    "type": "이용권변경"
+  },
+  {
+    "id": "P0105",
+    "memberId": "M004",
+    "date": "2026-08-25",
+    "amount": 180000,
+    "method": "카드",
+    "plan": "주3회 헬스",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0109",
+    "memberId": "M041",
+    "date": "2026-08-25",
+    "amount": 396000,
+    "method": "계좌이체",
+    "plan": "6개월권",
+    "type": "재등록"
+  },
+  {
+    "id": "P0019",
+    "memberId": "M014",
+    "date": "2026-09-02",
+    "amount": 231000,
+    "method": "현금",
+    "plan": "3개월권",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0117",
+    "memberId": "M005",
+    "date": "2026-09-02",
+    "amount": 1000000,
+    "method": "카드",
+    "plan": "PT 20회",
+    "type": "재등록"
+  },
+  {
+    "id": "P0118",
+    "memberId": "M033",
+    "date": "2026-09-02",
+    "amount": 180000,
+    "method": "카드",
+    "plan": "주3회 헬스",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0116",
+    "memberId": "M001",
+    "date": "2026-09-03",
+    "amount": 660000,
+    "method": "계좌이체",
+    "plan": "12개월권",
+    "type": "PT등록"
+  },
+  {
+    "id": "P0027",
+    "memberId": "M021",
+    "date": "2026-09-07",
+    "amount": 180000,
+    "method": "카드",
+    "plan": "주3회 헬스",
+    "type": "신규등록"
+  },
+  {
+    "id": "P0115",
+    "memberId": "M001",
+    "date": "2026-09-14",
+    "amount": 396000,
+    "method": "현금",
+    "plan": "6개월권",
+    "type": "재등록"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "id": "C01",
+    "name": "모닝 요가",
+    "instructorId": "T02",
+    "type": "group",
+    "day": "월",
+    "time": "07:00",
+    "duration": 50,
+    "capacity": 15,
+    "room": "B룸(GX룸)"
+  },
+  {
+    "id": "C02",
+    "name": "파워 웨이트",
+    "instructorId": "T01",
+    "type": "group",
+    "day": "월",
+    "time": "19:00",
+    "duration": 60,
+    "capacity": 12,
+    "room": "A룸(웨이트존)"
+  },
+  {
+    "id": "C03",
+    "name": "스피닝 HIIT",
+    "instructorId": "T03",
+    "type": "group",
+    "day": "화",
+    "time": "18:00",
+    "duration": 45,
+    "capacity": 20,
+    "room": "C룸(스피닝룸)"
+  },
+  {
+    "id": "C04",
+    "name": "필라테스 코어",
+    "instructorId": "T02",
+    "type": "group",
+    "day": "화",
+    "time": "10:00",
+    "duration": 50,
+    "capacity": 10,
+    "room": "B룸(GX룸)"
+  },
+  {
+    "id": "C05",
+    "name": "크로스핏 WOD",
+    "instructorId": "T04",
+    "type": "group",
+    "day": "수",
+    "time": "20:00",
+    "duration": 60,
+    "capacity": 12,
+    "room": "A룸(웨이트존)"
+  },
+  {
+    "id": "C06",
+    "name": "이브닝 요가",
+    "instructorId": "T02",
+    "type": "group",
+    "day": "수",
+    "time": "19:30",
+    "duration": 50,
+    "capacity": 15,
+    "room": "B룸(GX룸)"
+  },
+  {
+    "id": "C07",
+    "name": "펑셔널 트레이닝",
+    "instructorId": "T01",
+    "type": "group",
+    "day": "목",
+    "time": "18:30",
+    "duration": 55,
+    "capacity": 12,
+    "room": "A룸(웨이트존)"
+  },
+  {
+    "id": "C08",
+    "name": "스피닝 라이드",
+    "instructorId": "T03",
+    "type": "group",
+    "day": "금",
+    "time": "19:00",
+    "duration": 45,
+    "capacity": 20,
+    "room": "C룸(스피닝룸)"
+  },
+  {
+    "id": "C09",
+    "name": "주말 크로스핏",
+    "instructorId": "T04",
+    "type": "group",
+    "day": "토",
+    "time": "11:00",
+    "duration": 60,
+    "capacity": 12,
+    "room": "A룸(웨이트존)"
+  },
+  {
+    "id": "C10",
+    "name": "개인 PT 세션",
+    "instructorId": "T05",
+    "type": "pt",
+    "day": "월",
+    "time": "14:00",
+    "duration": 50,
+    "capacity": 1,
+    "room": "PT룸"
+  },
+  {
+    "id": "C11",
+    "name": "개인 PT 세션",
+    "instructorId": "T05",
+    "type": "pt",
+    "day": "수",
+    "time": "15:00",
+    "duration": 50,
+    "capacity": 1,
+    "room": "PT룸"
+  },
+  {
+    "id": "C12",
+    "name": "개인 PT 세션",
+    "instructorId": "T05",
+    "type": "pt",
+    "day": "금",
+    "time": "16:00",
+    "duration": 50,
+    "capacity": 1,
+    "room": "PT룸"
+  }
+]
