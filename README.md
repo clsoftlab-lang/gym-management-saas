@@ -25,6 +25,20 @@ A single-page **gym operations SaaS** demo for a gym owner/manager: members, che
 - **Persistence** — all edits saved to `localStorage`; **"reset demo data"** button restores the shipped seed.
 - **UX** — responsive mobile-first, light/dark via `prefers-color-scheme`, Korean UI, toasts, modals.
 
+## 🤖 AI 기능 (API 연동)
+
+Three AI features are built into the app (menu: **AI 어시스턴트 / 🤖**):
+
+1. **AI 트레이너 코치 챗봇** — members/managers ask in natural language about workouts, diet, plans, bookings, or memberships and get a helpful Korean answer (optionally personalized with a selected member's plan, PT balance, and recent attendance).
+2. **이탈 위험 회원 요약 + 맞춤 리텐션 메시지** — picks at-risk members (expiring soon / low recent attendance), summarizes the churn risk, and drafts a personalized retention SMS.
+3. **공지/문자 문구 자동 작성** — turns a short brief into announcement/notice copy plus a short SMS version (channel + tone aware).
+
+**The live demo uses a built-in mock provider** (`ai/ai.js` → `MockProvider`) that generates deterministic Korean outputs from the app's own member/attendance data — no backend and no key required, so it works as-is on GitHub Pages. Mock outputs are clearly labeled as demo AI.
+
+**To enable real AI**, deploy the reference proxy in [`server/`](server/README.md) with **your own** `ANTHROPIC_API_KEY` (model **`claude-opus-5`**, streaming), then set `AI_ENDPOINT` in [`ai/config.js`](ai/config.js) to that proxy's `/api/ai` URL. The browser then streams responses from the proxy.
+
+> **API keys are server-side only — never in the browser or the repo.** `ai/config.js` holds only the proxy URL; the key is read from `process.env.ANTHROPIC_API_KEY` on the server. `check.mjs` asserts `AI_ENDPOINT` defaults to empty and that no API key string is committed anywhere.
+
 ## Run locally
 
 ```bash
@@ -71,7 +85,10 @@ app.js              # router + nav + boot
 js/util.js          # dom/format/modal/toast helpers
 js/store.js         # seed load + localStorage + CRUD + derived stats
 js/charts.js        # Chart.js wrappers (theme-aware)
-js/views/*.js       # dashboard, members, attendance, schedule, lockers, payments, reminders, portal
+js/views/*.js       # dashboard, members, attendance, schedule, lockers, payments, reminders, portal, ai
+ai/config.js        # AI_ENDPOINT ("" ⇒ built-in mock; else backend proxy URL)
+ai/ai.js            # askAI(task, payload) — MockProvider + streaming fetch to the proxy
+server/             # reference backend proxy (@anthropic-ai/sdk, claude-opus-5) — operator-deployed, key server-side
 data/*.json         # fictional seed data
 check.mjs           # validator (CI + local)
 ```

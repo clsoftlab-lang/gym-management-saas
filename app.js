@@ -16,6 +16,7 @@ import { renderLockers } from './js/views/lockers.js';
 import { renderPayments } from './js/views/payments.js';
 import { renderReminders } from './js/views/reminders.js';
 import { renderPortal } from './js/views/portal.js';
+import { renderAI } from './js/views/ai.js';
 
 const ROUTES = [
   { id: 'dashboard', label: '대시보드', ic: '📊', render: renderDashboard, group: '운영' },
@@ -26,6 +27,7 @@ const ROUTES = [
   { id: 'payments', label: '결제·매출', ic: '💰', render: renderPayments, group: '자원' },
   { id: 'reminders', label: '리마인더·알림', ic: '🔔', render: renderReminders, group: '자원' },
   { id: 'portal', label: '회원용 화면', ic: '📱', render: renderPortal, group: '회원' },
+  { id: 'ai', label: 'AI 어시스턴트', ic: '🤖', render: renderAI, group: 'AI' },
 ];
 
 let current = 'dashboard';

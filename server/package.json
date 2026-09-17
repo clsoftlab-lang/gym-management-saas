@@ -1,0 +1,17 @@
+{
+  "name": "gym-management-saas-ai-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reference backend proxy for the 짐매니저 AI layer — keeps ANTHROPIC_API_KEY server-side only.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.70.0"
+  }
+}
