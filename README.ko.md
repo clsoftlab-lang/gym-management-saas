@@ -35,9 +35,33 @@
 
 **라이브 데모는 내장 목업(mock) 프로바이더**(`ai/ai.js` → `MockProvider`)로 동작합니다. 앱의 실제 회원·출석 데이터를 재사용해 결정적(deterministic) 한국어 결과를 생성하므로 **백엔드도 API 키도 필요 없이** GitHub Pages에서 그대로 동작합니다. 목업 출력은 "데모 AI"임을 명확히 표시합니다.
 
-**실제 AI를 사용하려면**, [`server/`](server/README.md)의 참조 프록시를 **운영자 본인의** `ANTHROPIC_API_KEY`로 배포하고(모델 **`claude-opus-5`**, 스트리밍), [`ai/config.js`](ai/config.js)의 `AI_ENDPOINT`를 그 프록시의 `/api/ai` URL로 설정하면 됩니다. 그러면 브라우저가 프록시로부터 응답을 스트리밍합니다.
+**실제 AI를 사용하려면**, [`server/`](server/README.md)의 참조 프록시를 **운영자 본인의** `ANTHROPIC_API_KEY`로 배포하고(저비용 기본 모델 **`claude-haiku-4-5`**, 변경 가능, 스트리밍), [`ai/config.js`](ai/config.js)의 `AI_ENDPOINT`를 그 프록시의 `/api/ai` URL로 설정하면 됩니다. 그러면 브라우저가 프록시로부터 응답을 스트리밍합니다.
 
-> **API 키는 서버에만 두며, 브라우저·저장소에는 절대 넣지 않습니다.** `ai/config.js`에는 키가 아니라 프록시 주소만 들어가고, 키는 서버의 `process.env.ANTHROPIC_API_KEY`에서 읽습니다. `check.mjs`는 `AI_ENDPOINT` 기본값이 비어 있는지와, 저장소 어디에도 API 키 문자열이 없는지를 검증합니다.
+> **API 키는 서버에만 두며, 브라우저·저장소에는 절대 넣지 않습니다.** `ai/config.js`에는 키가 아니라 프록시 주소만 들어가고, 키는 서버의 `process.env.ANTHROPIC_API_KEY`에서 읽습니다. `check.mjs`는 `AI_ENDPOINT` 기본값이 비어 있는지와, 저장소 어디에도 실제 API 키 문자열이 없는지를 검증합니다.
+
+## ⚙️ 고도화 — 무인·저비용 실 AI 연동
+
+AI 레이어는 **무인(autonomous) · 실제 AI 연결(real Claude) · 비용 합리적(cost-efficient)** 운영에 맞춰 고도화되어 있습니다.
+
+- **비용 모델 — 기본 `claude-haiku-4-5` ($1/$5 per MTok) + 프롬프트 캐싱 + 토큰 상한.**
+  `AI_MODEL`로 변경 가능(`claude-sonnet-5`·`claude-opus-5`로 상향). 고정 시스템 프롬프트를
+  캐시 블록(`cache_control:{type:'ephemeral'}`)으로 보내 반복 호출의 입력 비용을 크게 낮추고,
+  출력은 `AI_MAX_TOKENS`(기본 700)로 제한합니다. Haiku는 thinking/effort를 보내지 않고(모델이
+  거부), 그 외 모델은 adaptive thinking + `output_config.effort`(기본 `low`)를 사용합니다.
+- **대략적 비용:** Haiku 4.5 기준 **1,000요청당 약 $2**(요청당 출력 ~400토큰, 캐싱 적용).
+  Sonnet 5 ≈ 2배, Opus 5 ≈ 5배. 월 토큰 예산(`AI_MONTHLY_TOKEN_CAP`, 기본 2,000,000)과
+  IP당 레이트 리밋으로 비용을 방어하며, 초과 시 프록시가 `429 {fallback:true}`를 반환합니다.
+- **무인 (무료 Cloudflare Workers 배포):** [`server/worker.js`](server/worker.js) + [`server/wrangler.toml`](server/wrangler.toml)를
+  Cloudflare **무료 티어**(`wrangler deploy`)로 올리면 **관리할 서버가 없습니다.** Node용
+  [`server/index.mjs`](server/index.mjs)도 그대로 제공됩니다. 자세한 내용은 [`server/README.md`](server/README.md).
+- **절대 멈추지 않음 (자동 목업 폴백):** 엔드포인트 호출 실패 / 429 / 네트워크 오류 시
+  `ai/ai.js`가 **내장 목업으로 자동 폴백**하여 무인 상태에서도 앱이 계속 동작합니다.
+- **자율 기능 — 오늘의 운영 브리핑:** 대시보드가 로드 시 앱 자체 집계 엔진 + `askAI`로 운영
+  브리핑(오늘 만료임박 · 이탈위험 · 매출 요약)을 자동 생성합니다. 오프라인(목업)에서도 동작합니다.
+
+> **API 키는 서버에만 둡니다 — 브라우저·저장소에는 절대 넣지 않습니다.** Node 서버는
+> `process.env.ANTHROPIC_API_KEY`, Worker는 Cloudflare **시크릿**에서 키를 읽습니다. `check.mjs`는
+> 저장소 전체에서 실제 `sk-ant-…` 키를 스캔해, 커밋되면 실패시킵니다.
 
 ## 로컬 실행
 

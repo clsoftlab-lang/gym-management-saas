@@ -4,8 +4,9 @@
  */
 
 import { db, revenueByMonth, attendanceByDay, planDistribution, expiringSoon, checkedInToday } from '../store.js';
-import { el, won, wonShort, esc, avatar, fmtDate, TODAY } from '../util.js';
+import { el, won, wonShort, esc, avatar, fmtDate, daysLeft, TODAY } from '../util.js';
 import { revenueChart, attendanceChart, planChart } from '../charts.js';
+import { askAI } from '../../ai/ai.js';
 
 export function renderDashboard(root, { go }) {
   const members = db.members;
@@ -31,6 +32,7 @@ export function renderDashboard(root, { go }) {
       stat('💰', '이번 달 매출', wonShort(monthRevenue), monthKey + ' 기준'),
       stat('⏰', '만료 임박(14일)', soon.length + '명', soon.length ? '리마인더 발송 권장' : '없음'),
     ),
+    briefingPanel(),
     el('div', { class: 'two-col', style: 'margin-bottom:16px' },
       el('div', { class: 'panel' },
         el('div', { class: 'panel-head' },
@@ -62,6 +64,54 @@ export function renderDashboard(root, { go }) {
     planChart('ch-plan', planDistribution());
     attendanceChart('ch-att', attendanceByDay(14));
   });
+}
+
+/* 오늘의 운영 브리핑 — 대시보드 로드 시 자동 실행(무인). 앱 집계 엔진 + askAI(오프라인 목업 동작). */
+function briefingData() {
+  const from = new Date(TODAY); from.setDate(from.getDate() - 30);
+  const fromKey = from.toISOString().slice(0, 10);
+  const countAtt = (id) => db.attendance.filter((a) => a.memberId === id && a.date >= fromKey && a.date <= TODAY).length;
+  const soon = expiringSoon(7).map((m) => ({ name: m.name, plan: m.plan, left: m.left }));
+  const atRisk = db.members
+    .filter((m) => m.status === 'active' && countAtt(m.id) <= 2)
+    .slice(0, 8)
+    .map((m) => ({ name: m.name, att: countAtt(m.id), left: daysLeft(m.endDate) }));
+  const monthKey = TODAY.slice(0, 7);
+  return {
+    today: TODAY,
+    expiringSoon: soon,
+    expiringCount: soon.length,
+    atRisk,
+    monthRevenue: db.payments.filter((p) => p.date.slice(0, 7) === monthKey).reduce((s, p) => s + (Number(p.amount) || 0), 0),
+    todayCheckins: db.attendance.filter((a) => a.date === TODAY).length,
+    activeMembers: db.members.filter((m) => m.status === 'active').length,
+  };
+}
+
+function briefingPanel() {
+  const out = el('pre', {
+    class: 'ai-output',
+    style: 'white-space:pre-wrap;word-break:break-word;background:var(--surface-2);'
+      + 'border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px;'
+      + 'min-height:96px;margin:0;font-family:inherit;font-size:13.5px;line-height:1.65',
+  }, '브리핑 생성 중…');
+
+  const panel = el('div', { class: 'panel', style: 'margin-bottom:16px' },
+    el('div', { class: 'panel-head' },
+      el('h3', { class: 'panel-title' }, '🤖 오늘의 운영 브리핑'),
+      el('span', { class: 'panel-sub' }, '자동 생성 · 만료 임박·이탈 위험·매출'),
+    ),
+    out,
+  );
+
+  // 로드 직후 자동 실행. 실패해도 askAI가 내장 목업으로 폴백하므로 앱은 멈추지 않는다.
+  requestAnimationFrame(() => {
+    out.textContent = '';
+    askAI('briefing', briefingData(), { onToken: (chunk) => { out.textContent += chunk; } })
+      .catch((e) => { out.textContent = '⚠️ 브리핑을 생성하지 못했습니다: ' + ((e && e.message) ? e.message : e); });
+  });
+
+  return panel;
 }
 
 function expiringPanel(soon, go) {

@@ -35,9 +35,34 @@ Three AI features are built into the app (menu: **AI 어시스턴트 / 🤖**):
 
 **The live demo uses a built-in mock provider** (`ai/ai.js` → `MockProvider`) that generates deterministic Korean outputs from the app's own member/attendance data — no backend and no key required, so it works as-is on GitHub Pages. Mock outputs are clearly labeled as demo AI.
 
-**To enable real AI**, deploy the reference proxy in [`server/`](server/README.md) with **your own** `ANTHROPIC_API_KEY` (model **`claude-opus-5`**, streaming), then set `AI_ENDPOINT` in [`ai/config.js`](ai/config.js) to that proxy's `/api/ai` URL. The browser then streams responses from the proxy.
+**To enable real AI**, deploy the reference proxy in [`server/`](server/README.md) with **your own** `ANTHROPIC_API_KEY` (cost-first default model **`claude-haiku-4-5`**, configurable, streaming), then set `AI_ENDPOINT` in [`ai/config.js`](ai/config.js) to that proxy's `/api/ai` URL. The browser then streams responses from the proxy.
 
-> **API keys are server-side only — never in the browser or the repo.** `ai/config.js` holds only the proxy URL; the key is read from `process.env.ANTHROPIC_API_KEY` on the server. `check.mjs` asserts `AI_ENDPOINT` defaults to empty and that no API key string is committed anywhere.
+> **API keys are server-side only — never in the browser or the repo.** `ai/config.js` holds only the proxy URL; the key is read from `process.env.ANTHROPIC_API_KEY` on the server. `check.mjs` asserts `AI_ENDPOINT` defaults to empty and that no real API key string is committed anywhere.
+
+## ⚙️ 고도화 — 무인·저비용 실 AI 연동
+
+The AI layer is tuned for **무인(autonomous) · 실제 AI 연결(real Claude) · 비용 합리적(cost-efficient)** operation.
+
+- **Cost model — default `claude-haiku-4-5` ($1/$5 per MTok) + prompt caching + token cap.**
+  Configurable via `AI_MODEL` (raise to `claude-sonnet-5` or `claude-opus-5`). The stable system
+  prompt is sent as a cached block (`cache_control:{type:'ephemeral'}`) so repeat calls pay far
+  less for input; output is capped by `AI_MAX_TOKENS` (default 700). Haiku sends no thinking/effort
+  (it rejects them); other models use adaptive thinking + `output_config.effort` (default `low`).
+- **Rough cost:** ~**$2 per 1,000 requests** on Haiku 4.5 (~400 output tokens each, caching on);
+  Sonnet 5 ≈ 2×, Opus 5 ≈ 5×. A monthly budget (`AI_MONTHLY_TOKEN_CAP`, default 2,000,000 tokens)
+  plus a per-IP rate limit guard the bill — when exceeded the proxy returns `429 {fallback:true}`.
+- **무인 (free Cloudflare Workers deploy):** [`server/worker.js`](server/worker.js) + [`server/wrangler.toml`](server/wrangler.toml)
+  run on Cloudflare's **free tier** (`wrangler deploy`), so there is **no server to babysit**. The
+  Node [`server/index.mjs`](server/index.mjs) remains for any Node host. See [`server/README.md`](server/README.md).
+- **Never breaks (autonomous mock-fallback):** if the endpoint call fails / returns 429 / hits a
+  network error, `ai/ai.js` **auto-falls back to the built-in mock**, so the app keeps working unmanned.
+- **Autonomous feature — 오늘의 운영 브리핑:** the dashboard auto-generates an operations brief on
+  load (오늘 만료임박 · 이탈위험 · 매출 요약) from the app's own engines via `askAI` — and it works
+  offline through the mock too.
+
+> **API keys stay server-side only — never in the browser or the repo.** The Node server reads
+> `process.env.ANTHROPIC_API_KEY`; the Worker reads a Cloudflare **secret**. `check.mjs` scans the
+> whole repo for a real `sk-ant-…` key and fails if one is ever committed.
 
 ## Run locally
 

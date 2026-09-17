@@ -96,17 +96,19 @@ try {
 
 // 5) security: no committed API key anywhere in the repo
 console.log('[5/5] 보안 검사 (API 키 미포함)');
-const KEY_NEEDLE = ['sk', 'ant'].join('-'); // built at runtime so this file itself never contains the literal
-const TEXT_EXT = ['.js', '.mjs', '.json', '.md', '.html', '.css', '.txt', '.yml', '.yaml', '.example', '.env'];
+// Match a REAL Anthropic key (sk-ant-…) — built by concatenation so this file
+// itself never contains the literal prefix and never trips its own scan.
+const KEY_RE = new RegExp('sk-' + 'ant-[A-Za-z0-9_-]{20,}');
+const TEXT_EXT = ['.js', '.mjs', '.json', '.md', '.html', '.css', '.txt', '.yml', '.yaml', '.toml', '.example', '.env'];
 const isText = (n) => TEXT_EXT.some((e) => n.endsWith(e)) || n.startsWith('.env');
 const textFiles = walk(ROOT, isText);
 let hits = 0;
 for (const f of textFiles) {
   try {
-    if (readFileSync(f, 'utf8').includes(KEY_NEEDLE)) { bad(`API 키 문자열 발견: ${relative(ROOT, f)}`); hits++; }
+    if (KEY_RE.test(readFileSync(f, 'utf8'))) { bad(`실제 API 키 문자열 발견: ${relative(ROOT, f)}`); hits++; }
   } catch { /* ignore unreadable */ }
 }
-if (!hits) ok(`저장소 어디에도 API 키 문자열("${KEY_NEEDLE}…")이 없습니다 (${textFiles.length} files scanned)`);
+if (!hits) ok(`저장소 어디에도 실제 API 키(sk-ant-…)가 없습니다 (${textFiles.length} files scanned)`);
 
 console.log('');
 if (failures) { console.error(`FAILED: ${failures}개 검사 실패`); process.exit(1); }

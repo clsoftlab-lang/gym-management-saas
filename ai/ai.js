@@ -23,6 +23,7 @@ export const TASKS = [
   { id: 'coach', label: 'AI 트레이너 코치 챗봇', desc: '운동·식단·이용권 질문에 답하는 코치' },
   { id: 'retention', label: '이탈 위험 요약 + 리텐션 메시지', desc: '위험 회원 진단과 맞춤 재등록 문자 초안' },
   { id: 'notice', label: '공지/문자 문구 자동 작성', desc: '짧은 브리핑으로 공지·안내 문구 생성' },
+  { id: 'briefing', label: '오늘의 운영 브리핑', desc: '만료 임박·이탈 위험·매출을 자동 요약(대시보드 자동 실행)' },
 ];
 export const TASK_IDS = TASKS.map((t) => t.id);
 
@@ -34,7 +35,13 @@ const DEMO_TAG = '〔데모 AI · 목업 응답 — 실제 LLM 호출 아님〕'
 export async function askAI(task, payload = {}, { onToken } = {}) {
   if (!TASK_IDS.includes(task)) throw new Error(`알 수 없는 AI 작업: ${task}`);
   if (AI_ENDPOINT && String(AI_ENDPOINT).trim()) {
-    return callEndpoint(task, payload, onToken);
+    try {
+      return await callEndpoint(task, payload, onToken);
+    } catch (e) {
+      // AUTO-FALLBACK (무인 운영): 엔드포인트 실패 / 429(예산·레이트 초과, {fallback:true}) /
+      // 네트워크 오류 → 내장 목업으로 폴백해 앱이 절대 멈추지 않게 한다.
+      console.warn('AI 엔드포인트 폴백 → 내장 목업 사용:', (e && e.message) ? e.message : e);
+    }
   }
   return MockProvider[task](payload, onToken);
 }
@@ -270,6 +277,47 @@ const MockProvider = {
       '',
       '■ 문자(SMS) 축약본',
       sms,
+    ].join('\n');
+    return streamOut(out, onToken);
+  },
+
+  /* (4) 오늘의 운영 브리핑 — 대시보드 로드 시 자동 실행(무인). 앱 자체 집계 엔진 재사용. */
+  briefing(payload, onToken) {
+    const p = payload || {};
+    const today = p.today || '2026-09-17';
+    const mKey = today.slice(0, 7);
+    const money = (n) => '₩' + Math.round(Number(n) || 0).toLocaleString('ko-KR');
+
+    const soon = (p.expiringSoon && p.expiringSoon.length)
+      ? p.expiringSoon
+      : expiringSoon(7).map((m) => ({ name: m.name, plan: m.plan, left: m.left }));
+    const expiringCount = p.expiringCount != null ? p.expiringCount : soon.length;
+    const atRisk = Array.isArray(p.atRisk) ? p.atRisk : [];
+    const monthRevenue = p.monthRevenue != null ? p.monthRevenue
+      : db.payments.filter((x) => x.date.slice(0, 7) === mKey).reduce((s, x) => s + (Number(x.amount) || 0), 0);
+    const todayCheckins = p.todayCheckins != null ? p.todayCheckins
+      : db.attendance.filter((a) => a.date === today).length;
+    const activeMembers = p.activeMembers != null ? p.activeMembers
+      : db.members.filter((m) => m.status === 'active').length;
+
+    const soonNames = soon.slice(0, 3).map((m) => `${m.name}(D-${m.left})`).join(', ');
+    const riskNames = atRisk.slice(0, 3).map((m) => `${m.name}(30일 ${m.att ?? m.attendanceCount ?? '-'}회)`).join(', ');
+
+    const actions = [];
+    if (expiringCount > 0) actions.push(`만료 임박 ${expiringCount}명에게 리텐션 문자 발송(‘이탈 리텐션’ 탭)`);
+    if (atRisk.length > 0) actions.push(`출석 저조 ${atRisk.length}명 팔로업 연락`);
+    if (!actions.length) actions.push('오늘은 특별한 위험 신호가 없습니다. 신규 상담·수업 만족도 점검을 권장합니다.');
+
+    const out = [
+      DEMO_TAG,
+      `📋 오늘의 운영 브리핑 · ${today}`,
+      '',
+      `• 만료 임박(7일): ${expiringCount}명${soonNames ? ` — ${soonNames}` : ''}`,
+      `• 이탈 위험(출석 저조): ${atRisk.length}명${riskNames ? ` — ${riskNames}` : ''}`,
+      `• 이번 달 매출: ${money(monthRevenue)} (${mKey}) · 오늘 출석 ${todayCheckins}명 · 이용중 ${activeMembers}명`,
+      '',
+      '■ 추천 액션',
+      ...actions.map((a) => `• ${a}`),
     ].join('\n');
     return streamOut(out, onToken);
   },

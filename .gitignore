@@ -11,6 +11,12 @@ Thumbs.db
 .idea/
 .vscode/
 
+# Secrets — never commit real keys
+.env
+.env.*
+!.env.example
+.dev.vars
+
 # Logs / temp
 *.log
 npm-debug.log*
